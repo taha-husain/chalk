@@ -1,3 +1,3 @@
-;; resources/migrations/001-foo.edn
-{:up   ["CREATE TABLE users (id int);"]
+;; resources/migrations/001-create_users.edn
+{:up   ["CREATE TABLE users (id SERIAL PRIMARY KEY);"]
  :down ["DROP TABLE users;"]}
