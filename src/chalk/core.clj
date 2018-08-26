@@ -1,5 +1,5 @@
 (ns chalk.core
-  (:require [compojure.core               :refer :all]
+  (require [compojure.core               :refer :all]
             [chalk.routes                 :refer [app-routes]]
             [chalk.services.auth          :refer [wrap-user]]
             [buddy.auth.backends.session  :refer [session-backend]]

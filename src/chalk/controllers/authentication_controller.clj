@@ -1,7 +1,7 @@
 (ns chalk.controllers.authentication-controller
   (require [ring.util.response                :refer [response redirect]]
            [chalk.views.authentication.login  :refer [view]]
-           [chalk.services.auth               :refer [get-user-by-username-and-password]]
+           [chalk.entities.users              :refer [get-user-by-username-and-password]]
            [chalk.views.layout                :as    layout]))
 
 (defn new-login [req]

@@ -1,13 +1,13 @@
 (ns chalk.db
-  (:use [korma.db :refer [defdb postgres get-connection]])
-  (:require [ragtime.jdbc :as jdbc]
-            [ragtime.repl :as repl]))
+  (require  [ragtime.jdbc :as     jdbc]
+            [ragtime.repl :as     repl]
+            [korma.db     :refer  [defdb postgres]]))
 
-(defdb db (postgres {:host "localhost"
-                     :db "chalk"
-                     :user "postgres"
-                     :password "postgres"
-                     :port "5432"}))
+(defdb db (postgres {:host      "localhost"
+                     :db        "chalk"
+                     :user      "postgres"
+                     :password  "postgres"
+                     :port      "5432"}))
 
 (defn load-config
   []
